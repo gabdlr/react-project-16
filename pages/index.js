@@ -6,7 +6,7 @@ export default function Home() {
         <h1>
          Hello World  !
         </h1>
-        <Link href={'/aboutUs'}>About Us</Link>
+        <Link href={'/about-us'}>About Us</Link>
     </Layout>
   )
 }

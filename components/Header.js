@@ -5,15 +5,17 @@ export const Header = () => {
     return ( 
         <header className={styles.header}>
             <div className="contenedor">
-                <Link href="/" passHref>
-                    <Image src="/img/logo.svg" alt="Logo" width={400} height={100}></Image>
-                </Link>
-                <nav>
-                    <Link href="/">Home</Link>
-                    <Link href="/aboutUs">About us</Link>
-                    <Link href="/blog">Blog</Link>
-                    <Link href="/store">Store</Link>
-                </nav>
+                <div className={styles.bar}>
+                    <Link href="/" passHref>
+                        <Image src="/img/logo.svg" alt="Logo" width={400} height={100}></Image>
+                    </Link>
+                    <nav className={styles.navigation}>
+                        <Link href="/">Home</Link>
+                        <Link href="/about-us">About us</Link>
+                        <Link href="/blog">Blog</Link>
+                        <Link href="/shop">Store</Link>
+                    </nav>
+                </div>
             </div>
         </header>
      );

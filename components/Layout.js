@@ -1,7 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import Header from './Header';
+import Footer from './Footer';
 import { useRouter } from 'next/router';
+
 const Layout = ({children}) => {
     const router = useRouter();
     let currentRoute;
@@ -19,7 +21,8 @@ const Layout = ({children}) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header/>
-            {children}  
+            {children}
+            <Footer/>  
         </>
      );
 }
