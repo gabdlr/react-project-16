@@ -1,10 +1,14 @@
-.content {
+.blog {
     display: grid;
     gap: 4rem;
 }
 @media(min-width:768px) {
-    .content {
+    .blog {
         grid-template-columns: repeat(2, 1fr);
-        align-items: center;
+    }
+}
+@media(min-width:768px) {
+    .blog {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

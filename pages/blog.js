@@ -1,23 +1,36 @@
-import { useEffect } from "react";
-import Link from "next/link";
+import BlogEntry from "../components/BlogEntry";
 import Layout from "../components/Layout";
-
-const Blog = () => {
+import styles from "../styles/Blog.module.css";
+const Blog = ({entries}) => {
     
-    useEffect(() => {
-        const callAPI = async () => {
-            const url = 'http://localhost:1337/blogs';
-            const response = await (await fetch(url)).json();
-            console.log(response);
-        }
-        callAPI();
-    },[]);
-
     return ( 
         <Layout>
-            <h1>From Blog</h1>
+            <main className="contenedor">
+                <h2 className="heading">Blog</h2>
+                <div className={styles.blog}>
+                    {entries.map(entry => (
+                        <BlogEntry
+                            key={entry.id}
+                            entry={entry}
+                        />
+                    ))}
+                </div>
+            </main>
+            
         </Layout>
-     );
+    );
 }
- 
+
+export async function getStaticProps() {
+    
+    const url = 'http://localhost:1337/blogs';
+    const entries = await (await fetch(url)).json();
+
+    return {
+        props:{
+            entries
+        }
+    }
+}
+
 export default Blog;

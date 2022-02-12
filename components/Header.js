@@ -6,9 +6,11 @@ export const Header = () => {
         <header className={styles.header}>
             <div className="contenedor">
                 <div className={styles.bar}>
-                    {/* <Link href="/" passHref> */}
-                        <Image src="/img/logo.svg" alt="Logo" width={400} height={100}></Image>
-                    {/* </Link> */}
+                    <Link href="/" passHref>
+                        <a>
+                            <Image src="/img/logo.svg" alt="Logo" width={400} height={100}></Image>
+                        </a>
+                    </Link>
                     <nav className={styles.navigation}>
                         <Link href="/">Home</Link>
                         <Link href="/about-us">About us</Link>

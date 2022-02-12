@@ -6,7 +6,7 @@ export default function AboutUs()  {
         <Layout>
          <main className="contenedor">
              <h2 className="heading">About Us</h2>
-             <div className={styles.contenido}>
+             <div className={styles.content}>
                  <Image layout="responsive" width={600} height={450} alt="about us" src={'/img/nosotros.jpg'}/>
                  <div>
                      <p>
