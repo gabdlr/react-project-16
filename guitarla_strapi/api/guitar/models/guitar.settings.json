@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "blogs",
+  "collectionName": "guitars",
   "info": {
-    "name": "Blog",
-    "description": ""
+    "name": "Guitar"
   },
   "options": {
     "increments": true,
@@ -12,11 +11,12 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
-    "resume": {
+    "name": {
       "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
       "required": true
     },
     "image": {
@@ -29,13 +29,12 @@
       "required": true,
       "pluginOptions": {}
     },
-    "content": {
-      "type": "richtext",
-      "required": true
+    "price": {
+      "type": "integer"
     },
-    "entry": {
+    "item": {
       "type": "uid",
-      "targetField": "title"
+      "targetField": "name"
     }
   }
 }

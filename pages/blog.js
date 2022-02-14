@@ -11,7 +11,7 @@ const Blog = ({entries}) => {
                     {entries.map(entry => (
                         <BlogEntry
                             key={entry.id}
-                            entry={entry}
+                            entryInformation={entry}
                         />
                     ))}
                 </div>
@@ -23,7 +23,7 @@ const Blog = ({entries}) => {
 
 export async function getStaticProps() {
     
-    const url = 'http://localhost:1337/blogs';
+    const url = `${process.env.API_URL}/blogs?_sort=created_at:desc`;
     const entries = await (await fetch(url)).json();
 
     return {
