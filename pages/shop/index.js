@@ -1,5 +1,5 @@
-import GuitarList from "../components/GuitarList";
-import Layout from "../components/Layout";
+import GuitarList from "../../components/GuitarList";
+import Layout from "../../components/Layout";
 
 
 export default function Shop({guitars})  {

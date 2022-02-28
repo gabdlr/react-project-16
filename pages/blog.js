@@ -1,20 +1,15 @@
-import BlogEntry from "../components/BlogEntry";
+
 import Layout from "../components/Layout";
-import styles from "../styles/Blog.module.css";
+import BlogList from "../components/BlogList";
+
 const Blog = ({entries}) => {
     
     return ( 
         <Layout>
             <main className="contenedor">
-                <h2 className="heading">Blog</h2>
-                <div className={styles.blog}>
-                    {entries.map(entry => (
-                        <BlogEntry
-                            key={entry.id}
-                            entryInformation={entry}
-                        />
-                    ))}
-                </div>
+                <BlogList
+                    entries={entries}
+                />
             </main>
             
         </Layout>

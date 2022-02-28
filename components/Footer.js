@@ -10,7 +10,7 @@ const Footer = () => {
                     <Link href="/blog">Blog</Link>
                     <Link href="/shop">Store</Link>
                 </nav>
-                <p className={styles.copyright}>Todos los derechos reservados</p>
+                <p className={styles.copyright}>All rights reserved</p>
             </div>
         </footer>
      );

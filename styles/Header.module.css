@@ -3,6 +3,7 @@
     background-size: cover;
     background-position: 50%;
     padding: 5rem 0;
+    position: relative;
 }
 
 .bar {
@@ -21,10 +22,13 @@
     margin-top: 5rem;
     display: flex;
     gap: 2rem;
+    position: relative;
+    z-index: 999;
 }
 @media(min-width: 768px){
     .navigation{
         margin-top: 0;
+        padding-right: 10rem;
         align-self: center;
     }
 }
@@ -43,3 +47,82 @@
     transition-duration: .3s;
 } 
 
+.guitar_banner {
+    display: none;
+}
+
+@media(min-width:992px) {
+    .guitar_banner {
+        display: block;
+        position: absolute;
+        right: -150px;
+        bottom: -10px;
+        animation-name: show_image;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-delay: 0s;
+        animation-timing-function: ease-in-out;
+    }
+    
+}
+
+.guitar_model {
+    color: var(--blanco);
+    margin-top: 5rem;
+    text-align: center;
+}
+@media(min-width:768px) {
+    .guitar_model{
+        text-align: left;
+        width: 50%;
+    }
+}
+
+.guitar_model h2 {
+    font-size: 8rem;
+}
+
+.guitar_model p:first-of-type{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    font-size: 2.2rem;
+}
+
+.price{
+    font-size: 6rem;
+    color: var(--primary);
+    font-weight: 900;
+    line-height: 0;
+}
+
+.link {
+    margin-top: 2rem;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--blanco);
+    border: 2px solid var(--primary);
+    padding: 1rem 5rem;
+    transition: background-color .3s;
+}
+
+.link:hover {
+    background-color: var(--primary);
+    color: var(--blanco);
+}
+
+@keyframes show_image {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
