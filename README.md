@@ -1,4 +1,4 @@
-This project was bootstrapped with Vite.
+This project was bootstrapped with Next.
 
 Este sitio web forma parte de un curso realizado en Udemy "React - La Guía Completa: Hooks Context Redux MERN" por Juan Pablo De La Torre Valdez. Para su realización se utilizo React.
 
