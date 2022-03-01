@@ -11,12 +11,13 @@ const Layout = ({children, guitar}) => {
         currentRoute = "Home";
     } else {  
         currentRoute = [...router.asPath];
-        currentRoute.forEach((value, index) => {if(value === "/") currentRoute[index+1] = currentRoute[index+1].toUpperCase()});
+        currentRoute.forEach((value, index) => {
+            if(value === "/") currentRoute[index+1] = currentRoute[index+1].toUpperCase();
+        });
         currentRoute = currentRoute.join("")
                         .replaceAll("/", " ")
                         .replaceAll("-", " ")
-                        .slice(0);
-
+                        .slice(0);                 
     }
     return (  
         <>
